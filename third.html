@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>MindfulTea – Путь Чая</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+      /* Дополнительные стили для галереи и отзывов */
+      .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1em;
+      }
+      .testimonial {
+        background: rgba(255,255,255,0.1);
+        padding: 1em;
+        margin: 1em 0;
+        border-left: 4px solid #FFA500;
+      }
+      .testimonial p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+
+    <!-- Обёртка страницы -->
+    <div id="page-wrapper">
+
+      <!-- Шапка сайта -->
+      <header id="header">
+        <!-- Логотип: ссылка ведёт на главную страницу (main.html) -->
+        <h1><a href="main.html">MindfulTea</a></h1>
+        <nav id="nav">
+          <ul>
+            <li class="special">
+              <a href="#menu" class="menuToggle"><span>Menu</span></a>
+              <div id="menu">
+                <ul>
+                  <!-- Обновлённые ссылки меню -->
+                  <li><a href="main.html">Главная</a></li>
+                  <li><a href="third.html">Путь Чая</a></li>
+                  <li><a href="terms.html">Термины</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Основной контент -->
+      <article id="main">
+        <header>
+          <h2>Путь Чая</h2>
+          <p>Погружение в философию, ритуалы и традиции MindfulTea</p>
+        </header>
+        
+        <section class="wrapper style5">
+          <div class="inner">
+
+            <!-- Введение -->
+            <section>
+              <header>
+                <h3>Введение</h3>
+              </header>
+              <p>
+                Чай – это больше, чем просто напиток; это целая философия, способ постижения внутренней гармонии. 
+                На этой странице вы узнаете о традициях чаепития, ритуалах, а также познакомитесь с основными понятиями, 
+                лежащими в основе MindfulTea.
+              </p>
+            </section>
+
+            <hr />
+
+            <!-- Глава 1. История и Философия -->
+            <section>
+              <header>
+                <h4>Глава 1. Чашка Чая как Акт Гуманности</h4>
+              </header>
+              <p>
+                С древних времен чай применяли как лекарство, а затем он стал символом утончённости, спокойствия и гармонии. 
+                В VIII веке в Китае чаепитие стало популярным развлечением, а в XV веке в Японии его возвели в культ – Тядо. 
+                Философия Тядо учит нас видеть красоту в простоте и находить гармонию в каждом моменте.
+              </p>
+              <p>
+                Каждый глоток чая – это возможность остановиться, задуматься и проникнуться глубиной бытия. 
+                Чай напоминает о быстротечности жизни, призывая нас ценить каждое мгновение.
+              </p>
+            </section>
+
+            <hr />
+
+            <!-- Глава 2. Ритуалы и Традиции -->
+            <section>
+              <header>
+                <h4>Глава 2. Ритуалы и Традиции Чаепития</h4>
+              </header>
+              <p>
+                Чайная церемония – это искусство, в котором каждое движение, каждое прикосновение имеет значение. 
+                От выбора посуды до подачи напитка – все направлено на создание атмосферы умиротворения и сосредоточенности. 
+                Ритуалы MindfulTea передаются из поколения в поколение, сохраняя древние традиции и объединяя сердца людей.
+              </p>
+              <p>
+                Цель церемонии – не только насладиться вкусом чая, но и обрести внутреннюю гармонию, которая так необходима в современном мире.
+              </p>
+            </section>
+
+            <hr />
+
+            <!-- Фотогалерея -->
+            <section>
+              <header>
+                <h4>Фотогалерея Чаепития</h4>
+              </header>
+              <p>
+                Посмотрите на атмосферу MindfulTea через объектив. Ниже приведены фотографии, которые отражают красоту чайной церемонии и её традиций.
+              </p>
+              <div class="gallery">
+                <img src="images/tea1.jpg" alt="Чайная церемония">
+                <img src="images/tea2.jpg" alt="Чайная посуда">
+                <img src="images/tea3.jpg" alt="Мастер за чаем">
+                <!-- Добавьте другие изображения по необходимости -->
+              </div>
+            </section>
+
+            <hr />
+
+            <!-- Отзывы и цитаты -->
+            <section>
+              <header>
+                <h4>Отзывы и Мудрость</h4>
+              </header>
+              <div class="testimonial">
+                <p>
+                  «С каждым глотком чая я ощущаю, как уходит суета мира, и наступает тишина, наполняющая душу.»
+                </p>
+                <p><strong>— Анонимный поклонник MindfulTea</strong></p>
+              </div>
+              <div class="testimonial">
+                <p>
+                  «MindfulTea научил меня ценить каждый момент и видеть красоту даже в самых простых вещах.»
+                </p>
+                <p><strong>— Любитель чая</strong></p>
+              </div>
+            </section>
+
+            <hr />
+
+            <!-- Дополнительная информация -->
+            <section>
+              <header>
+                <h4>Философия и Современность</h4>
+              </header>
+              <p>
+                MindfulTea объединяет древние традиции с современным стремлением к осознанности. 
+                Здесь вы узнаете, как чай помогает нам обрести баланс, справляться со стрессом и находить вдохновение в повседневности.
+              </p>
+              <p>
+                Мы верим, что каждый может открыть для себя путь к внутренней гармонии, пробуждая в себе новые чувства и эмоции через ритуалы чаепития.
+              </p>
+            </section>
+
+            <hr />
+
+            <!-- Призыв к действию -->
+            <section>
+              <header>
+                <h4>Присоединяйтесь к Пути Чая</h4>
+              </header>
+              <p>
+                Если вы готовы углубиться в мир MindfulTea, изучить его философию и традиции, оставайтесь с нами. 
+                Пусть каждая деталь этой страницы станет шагом к вашему внутреннему равновесию.
+              </p>
+              <ul class="actions">
+                <!-- Ссылка на главную страницу обновлена -->
+                <li><a href="main.html" class="button primary">На Главную</a></li>
+                <li><a href="#footer" class="button">Контакты</a></li>
+              </ul>
+            </section>
+
+          </div> <!-- .inner -->
+        </section>
+      </article>
+
+      <!-- Подвал -->
+      <footer id="footer">
+        <ul class="icons">
+          <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+          <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+          <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+          <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+          <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; MindfulTea 2025</li>
+          <li>Design by Marktd11</li>
+        </ul>
+      </footer>
+
+    </div>
+
+    <!-- Скрипты -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
