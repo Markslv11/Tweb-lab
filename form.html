@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Регистрация на церемонию — MindfulTea</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #faf7f2, #f3eae0);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 3em auto;
+      background: #fff8f1;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #5e3e2f;
+      margin-bottom: 1em;
+      font-size: 1.8em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    label {
+      display: block;
+      margin-top: 1em;
+      font-weight: 600;
+      color: #4a3f35;
+    }
+
+    /* Единый белый фон для всех полей */
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 0.8em;
+      margin-top: 0.3em;
+      border: 1px solid #ddd1c4;
+      border-radius: 8px;
+      background: #ffffff;      /* белый фон */
+      color: #4a3f35;           /* тёмный текст */
+      font-size: 1em;
+      transition: border-color 0.3s;
+      box-sizing: border-box;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    /* На всякий случай перекрашиваем date-picker */
+    input[type="date"] {
+      background: #ffffff;      /* белый фон */
+      color: #4a3f35;           /* тёмный текст */
+    }
+
+    /* Стили индикатора календаря */
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(0.3);
+      opacity: 0.7;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #a89f95;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: #e2533d;
+    }
+
+    .button {
+      display: block;
+      margin: 2em auto 0;
+      background: #e2533d;
+      color: #fff;
+      padding: 1em 2.5em;
+      border: none;
+      border-radius: 12px;
+      font-size: 1em;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .button:hover {
+      background: #c94732;
+      transform: translateY(-2px);
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 1.5em;
+      color: #5e3e2f;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Запись на чайную церемонию</h2>
+    <form action="submit.php" method="POST">
+      <label for="name">Ваше имя</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Электронная почта</label>
+      <input type="email" id="email" name="email" placeholder="example@mail.com" required />
+
+      <label for="phone">Телефон (по желанию)</label>
+      <input type="tel" id="phone" name="phone" />
+
+      <label for="date">Желаемая дата церемонии</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="message">Комментарий</label>
+      <textarea id="message" name="message" rows="4" placeholder="Например: интересует Гун Фу Ча, есть предпочтения по времени..."></textarea>
+
+      <button type="submit" class="button">Записаться</button>
+    </form>
+    <a href="main.html" class="back-link">← Вернуться на главную</a>
+  </div>
+</body>
+</html>

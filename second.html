@@ -1,20 +1,108 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>Книга про чай — MindfulTea</title>
+    <title>Сорта китайского чая — MindfulTea</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+      .wrapper {
+        padding: 3em 0;
+        background: linear-gradient(135deg, #faf7f2, #f3eae0);
+      }
+
+      .tea-card {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2em 0;
+        border: 1px solid #d6c6b8;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: #fffaf3;
+      }
+
+      .tea-card .tea-image {
+        flex: 1 1 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 200px;
+        max-width: 200px;
+        min-height: 200px;
+        overflow: hidden;
+      }
+
+      .tea-card .tea-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .tea-card .tea-content {
+        flex: 2 1 300px;
+        padding: 1.5em;
+        background-color: #f7f1e3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .tea-card .tea-content h3 {
+        margin: 0 0 0.5em;
+        color: #4a3f35;
+      }
+
+      .tea-card .tea-content p {
+        margin: 0 0 1em;
+        color: #4a3f35;
+        line-height: 1.6;
+      }
+
+      /* Кнопки перед футером */
+      .button-group {
+        margin-top: 1.5em;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0.75em 2em;
+        font-size: 0.95em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-radius: 6px;
+        margin: 0 0.5em;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .btn.primary {
+        background-color: #e2533d;
+        color: #fff;
+        border: none;
+      }
+
+      .btn.primary:hover {
+        background-color: #c94732;
+      }
+
+      .btn.outline {
+        background-color: transparent;
+        color: #2d2d2d;
+        border: 2px solid #ddd;
+      }
+
+      .btn.outline:hover {
+        background-color: #f8f8f8;
+      }
+    </style>
   </head>
   <body class="is-preload">
-
-    <!-- Обёртка страницы -->
     <div id="page-wrapper">
 
-      <!-- Шапка сайта -->
       <header id="header">
-        <!-- Логотип, ссылка ведёт на главную (main.html) -->
         <h1><a href="main.html">MindfulTea</a></h1>
         <nav id="nav">
           <ul>
@@ -22,11 +110,9 @@
               <a href="#menu" class="menuToggle"><span>Menu</span></a>
               <div id="menu">
                 <ul>
-                  <!-- Обновлённые ссылки меню -->
                   <li><a href="main.html">Главная</a></li>
-                  <li><a href="third.html">вторая</a></li>
-                  <li><a href="second.html">Книга про чай</a></li>
-                  <!-- Убраны Sign Up и Log In -->
+                  <li><a href="second.html">Сорта чая</a></li>
+                  <li><a href="third.html">Традиции</a></li>
                 </ul>
               </div>
             </li>
@@ -34,169 +120,104 @@
         </nav>
       </header>
 
-      <!-- Основной контент -->
       <article id="main">
-        <!-- Заголовок страницы -->
         <header>
-          <h2>Книга про чай</h2>
-          <p>Окакура Какудзо • адаптированные отрывки</p>
+          <h2>Сорта китайского чая</h2>
+          <p>Погрузитесь в мир ароматов и вкусов, откройте для себя богатство традиций и уникальные свойства каждого сорта.</p>
         </header>
 
-        <!-- Секция с текстом (wrapper style5) -->
-        <section class="wrapper style5">
+        <section class="wrapper">
           <div class="inner">
-            <!-- 1. Небольшое вступление -->
-            <section>
-              <header>
-                <h3>Введение</h3>
-              </header>
-              <p>
-                «Книга про чай» была написана в начале XX века и рассказывает о философии чая, 
-                о культуре чайной церемонии, зародившейся в Японии, и о том, как этот напиток 
-                повлиял на религию, искусство и образ жизни многих народов. 
-                Какузо Окакура, автор книги, стремился донести до западного общества 
-                уникальный взгляд Востока и показать, как чай и его ритуалы 
-                стали неотъемлемой частью азиатской культуры.
-              </p>
-              <p>
-                Ниже приведены некоторые отрывки из оригинала, 
-                в которых раскрывается философия «Тядо» — Пути Чая, 
-                основанного на эстетике, гармонии и уважении к прекрасному в обыденном.
-              </p>
-            </section>
 
-            <hr />
-
-            <!-- 2. Отрывок: Глава 1 (примерно сокращённо) -->
-            <section>
-              <header>
-                <h4>Глава 1. Чашка чая как акт гуманности</h4>
-              </header>
-              <p>
-                «Чай сначала употребляли как лекарство, а лишь потом он превратился в напиток, 
-                утоляющий жажду. В VIII веке в Китае чаепитие стало одной из самых приятных 
-                забав и предметом поэзии. В XV веке в Японии чаепитие возвели в культ — Тядо. 
-                Считалось, что поклонение чаю привносит чистоту и гармонию в социальные отношения, 
-                взаимное милосердие, чуткость и романтизм. Тядо, основанный на преклонении перед 
-                прекрасным, выражал стремление народа к совершенству в повседневной жизни.»
-              </p>
-              <p>
-                «Философия Тядо проповедует не только эстетику взаимоотношений человека и природы. 
-                Это учение о гигиене через заботу о чистоте, об экономии через демонстрацию 
-                преимуществ комфорта в простоте по сравнению с роскошью, о морали через 
-                осознание быстротечности человеческой жизни и вечности Вселенной.»
-              </p>
-            </section>
-
-            <hr />
-
-            <!-- 3. Отрывок: Глава 2 (пример) -->
-            <section>
-              <header>
-                <h4>Глава 2. Школы чая</h4>
-              </header>
-              <p>
-                «Приготовление чая — это искусство, требующее руки мастера, 
-                способного раскрыть самые благородные качества напитка. 
-                В истории выделяют три основных способа приготовления: 
-                кипячёный чай, обданный окропом и заваренный чай. 
-                Подобно многим хорошим вещам в мире, путь распространения чая 
-                столкнулся с сопротивлением. Но чай завоевал планету благодаря 
-                тонкому и неуловимому очарованию вкуса и аромата, которые 
-                покоряют сердца людей во всех странах.»
-              </p>
-              <p>
-                «В Японии чайные церемонии (Тядо) достигли совершенства в XV веке под влиянием 
-                дзэн-буддизма. Чай превратился в символ поклонения чистоте и утончённости. 
-                Чайная комната стала оазисом в пустыне повседневной жизни, где усталые путники 
-                могли собраться, чтобы отпить из общего источника и насладиться беседой. 
-                Здесь каждый жест, каждая деталь комнаты призваны сохранять гармонию, 
-                а участники церемонии достигают высшей ступени блаженства в простоте.»
-              </p>
-            </section>
-
-            <hr />
-
-            <!-- 4. Дополнительный блок с таблицей — для демонстрации оформления -->
-            <section>
-              <h4>Таблица: Основные термины</h4>
-              <div class="table-wrapper">
-                <table class="alt">
-                  <thead>
-                    <tr>
-                      <th>Термин</th>
-                      <th>Описание</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Тядо</td>
-                      <td>«Путь чая», японская чайная церемония, основанная на дзэн-буддизме</td>
-                    </tr>
-                    <tr>
-                      <td>Лу Юй</td>
-                      <td>Китайский поэт VIII века, автор «Чайного канона» (Ча цзин)</td>
-                    </tr>
-                    <tr>
-                      <td>Рикю</td>
-                      <td>Величайший мастер чая XVI века, заложивший основы современной церемонии</td>
-                    </tr>
-                    <tr>
-                      <td>Ваби</td>
-                      <td>Принцип простоты и естественности в японской эстетике</td>
-                    </tr>
-                    <tr>
-                      <td>Саби</td>
-                      <td>Красота скромной старины и следов времени</td>
-                    </tr>
-                  </tbody>
-                </table>
+            <section class="tea-card">
+              <div class="tea-image">
+                <img src="images/WhiteTea.jpg" alt="Белый чай" />
+              </div>
+              <div class="tea-content">
+                <h3>Белый чай</h3>
+                <p>Нежнейший чай из юных почек. Лёгкий, чистый и освежающий.</p>
               </div>
             </section>
 
-            <hr />
-
-            <!-- 5. Завершающий блок с формой (пример оформления) -->
-            <section>
-              <h4>Поделитесь мнением</h4>
-              <p>Что вы думаете о философии Тядо и влиянии чая на культуру?</p>
-              <form method="post" action="#">
-                <div class="row gtr-uniform">
-                  <div class="col-6 col-12-xsmall">
-                    <input type="text" name="demo-name" id="demo-name" placeholder="Ваше имя" />
-                  </div>
-                  <div class="col-6 col-12-xsmall">
-                    <input type="email" name="demo-email" id="demo-email" placeholder="Email" />
-                  </div>
-                  <div class="col-12">
-                    <textarea name="demo-message" id="demo-message" placeholder="Сообщение" rows="6"></textarea>
-                  </div>
-                  <div class="col-12">
-                    <ul class="actions">
-                      <li><input type="submit" value="Отправить" class="primary" /></li>
-                      <li><input type="reset" value="Сброс" /></li>
-                    </ul>
-                  </div>
-                </div>
-              </form>
+            <section class="tea-card">
+              <div class="tea-image">
+                <img src="images/GreenTea.jpg" alt="Зелёный чай" />
+              </div>
+              <div class="tea-content">
+                <h3>Зелёный чай</h3>
+                <p>Освежающий, с лёгкой горчинкой. Бодрит и дарит энергию.</p>
+              </div>
             </section>
 
-          </div> <!-- .inner -->
+            <section class="tea-card">
+              <div class="tea-image">
+                <img src="images/BlackTea.jpg" alt="Чёрный чай" />
+              </div>
+              <div class="tea-content">
+                <h3>Чёрный чай</h3>
+                <p>Крепкий, насыщенный. Идеален к завтраку или обеду.</p>
+              </div>
+            </section>
+
+            <section class="tea-card">
+              <div class="tea-image">
+                <img src="images/OolongTea.jpg" alt="Улун" />
+              </div>
+              <div class="tea-content">
+                <h3>Улун</h3>
+                <p>Полуферментированный чай с фруктовыми нотками.</p>
+              </div>
+            </section>
+
+            <section class="tea-card">
+              <div class="tea-image">
+                <img src="images/PuerTea.jpg" alt="Пуэр" />
+              </div>
+              <div class="tea-content">
+                <h3>Пуэр</h3>
+                <p>Зрелый и глубокий вкус, чай с выдержкой и характером.</p>
+              </div>
+            </section>
+
+            <section class="tea-card">
+              <div class="tea-image">
+                <img src="images/YellowTea.jpg" alt="Жёлтый чай" />
+              </div>
+              <div class="tea-content">
+                <h3>Жёлтый чай</h3>
+                <p>Редкий, бархатистый и сбалансированный чайный вкус.</p>
+              </div>
+            </section>
+
+          </div>
+        </section>
+
+        <!-- БЛОК ПЕРЕД ФУТЕРОМ С КНОПКАМИ -->
+        <section class="wrapper" style="background: linear-gradient(135deg, #f7f1e3, #fdf8f2); padding: 3em 1em;">
+          <div class="inner" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h3 style="color: #4a3f35; font-size: 1.8em; margin-bottom: 0.5em;">Хотите узнать больше?</h3>
+            <p style="color: #5c4b3b; font-size: 1.1em; margin-bottom: 1.5em;">
+              Откройте для себя удивительные традиции китайского чаепития и философию чайных ритуалов.
+            </p>
+            <div class="button-group">
+              <a href="third.html" class="btn primary">УЗНАТЬ О ТРАДИЦИЯХ</a>
+              <a href="main.html" class="btn outline">НА ГЛАВНУЮ</a>
+            </div>
+          </div>
         </section>
       </article>
 
-      <!-- Подвал -->
       <footer id="footer">
         <ul class="icons">
-          <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-          <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-          <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-          <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-          <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+          <li><a href="#" class="icon brands fa-twitter"></a></li>
+          <li><a href="#" class="icon brands fa-facebook-f"></a></li>
+          <li><a href="#" class="icon brands fa-instagram"></a></li>
+          <li><a href="#" class="icon brands fa-dribbble"></a></li>
+          <li><a href="#" class="icon solid fa-envelope"></a></li>
         </ul>
         <ul class="copyright">
           <li>&copy; MindfulTea</li>
-          <li>Design by Marktd11</li>
+          <li>Design by Mark Demchenko</li>
         </ul>
       </footer>
 

@@ -3991,3 +3991,36 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+	/* === Переопределение фона и цвета всех полей === */
+.form-container input,
+.form-container textarea,
+.form-container select {
+  background-color: #ffffff !important;
+  color: #4a3f35 !important;
+  border: 1px solid #ddd1c4 !important;
+}
+
+/* Специально для input[type="date"] */
+.form-container input[type="date"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #ffffff !important;
+  color: #4a3f35 !important;
+}
+
+.form-container input[type="date"]::-webkit-inner-spin-button,
+.form-container input[type="date"]::-webkit-calendar-picker-indicator,
+.form-container input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+  opacity: 1 !important;
+  color: #4a3f35 !important;
+}
+
+/* Отключение серого фона автозаполнения */
+.form-container input:-webkit-autofill,
+.form-container textarea:-webkit-autofill,
+.form-container select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+          box-shadow: 0 0 0px 1000px #ffffff inset !important;
+  -webkit-text-fill-color: #4a3f35 !important;
+}

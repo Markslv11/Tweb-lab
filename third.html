@@ -1,53 +1,92 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>MindfulTea – Путь Чая</title>
+    <title>MindfulTea – Традиции Чаепития</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-      /* Дополнительные стили для галереи и отзывов */
-      .gallery img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
+      .wrapper {
+        padding: 3em 0;
+        background: linear-gradient(135deg, #fdf8f2, #f7f1e3);
       }
-      .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1em;
+
+      .inner {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 1em;
       }
-      .testimonial {
-        background: rgba(255,255,255,0.1);
-        padding: 1em;
-        margin: 1em 0;
-        border-left: 4px solid #FFA500;
+
+      h2 {
+        color: white;
+        text-align: center;
       }
-      .testimonial p {
-        font-style: italic;
+
+      h3 {
+        color: #4a3f35;
+        margin-top: 2em;
+      }
+
+      p {
+        color: #4a3f35;
+        line-height: 1.7;
+        margin-bottom: 1.5em;
+        font-size: 1.1em;
+      }
+
+      .actions {
+        text-align: center;
+        margin-top: 3em;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0.75em 2em;
+        font-size: 0.95em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 6px;
+        margin: 0 0.5em;
+        text-decoration: none;
+        transition: 0.3s ease;
+      }
+
+      .btn.primary {
+        background-color: #e2533d;
+        color: white;
+        border: none;
+      }
+
+      .btn.primary:hover {
+        background-color: #c94732;
+      }
+
+      .btn.outline {
+        background-color: transparent;
+        color: #2d2d2d;
+        border: 2px solid #ccc;
+      }
+
+      .btn.outline:hover {
+        background-color: #f8f8f8;
       }
     </style>
   </head>
   <body class="is-preload">
-
-    <!-- Обёртка страницы -->
     <div id="page-wrapper">
 
-      <!-- Шапка сайта -->
       <header id="header">
-        <!-- Логотип: ссылка ведёт на главную страницу (main.html) -->
         <h1><a href="main.html">MindfulTea</a></h1>
         <nav id="nav">
           <ul>
             <li class="special">
-              <a href="#menu" class="menuToggle"><span>Menu</span></a>
+              <a href="#menu" class="menuToggle"><span>Меню</span></a>
               <div id="menu">
                 <ul>
-                  <!-- Обновлённые ссылки меню -->
                   <li><a href="main.html">Главная</a></li>
-                  <li><a href="third.html">Путь Чая</a></li>
-                  <li><a href="terms.html">Термины</a></li>
+                  <li><a href="second.html">Сорта чая</a></li>
+                  <li><a href="third.html">Традиции</a></li>
                 </ul>
               </div>
             </li>
@@ -55,154 +94,62 @@
         </nav>
       </header>
 
-      <!-- Основной контент -->
       <article id="main">
         <header>
-          <h2>Путь Чая</h2>
-          <p>Погружение в философию, ритуалы и традиции MindfulTea</p>
+          <h2>Традиции Чаепития</h2>
+          <p>Осознанность, красота и глубокая культура Китая</p>
         </header>
-        
-        <section class="wrapper style5">
+
+        <section class="wrapper">
           <div class="inner">
 
-            <!-- Введение -->
-            <section>
-              <header>
-                <h3>Введение</h3>
-              </header>
-              <p>
-                Чай – это больше, чем просто напиток; это целая философия, способ постижения внутренней гармонии. 
-                На этой странице вы узнаете о традициях чаепития, ритуалах, а также познакомитесь с основными понятиями, 
-                лежащими в основе MindfulTea.
-              </p>
-            </section>
+            <h3>Искусство Пин Ча</h3>
+            <p>
+              Пин Ча (品茶) — это церемония «дегустации чая». В отличие от торжественной Гун Фу Ча, Пин Ча более легкая по настроению и сосредоточена
+              на вкусе, аромате и послевкусии чая. Участники сидят в спокойной обстановке, попеременно пробуя разные сорта, сравнивая ноты вкуса.
+            </p>
+            <p>
+              Эта форма чаепития идеально подходит для тех, кто хочет углубить своё понимание чая. Пин Ча — это возможность остановиться и прочувствовать каждую чашку,
+              будто общаясь с ней напрямую.
+            </p>
 
-            <hr />
+            <h3>Гун Фу Ча — Чай как медитация</h3>
+            <p>
+              Гун Фу Ча (工夫茶) — «чай, приготовленный с мастерством». Это ритуал, в котором сочетается внимание к деталям, эстетика и спокойствие.
+              Всё — от прогрева посуды до последовательного заваривания — превращается в искусство.
+            </p>
+            <p>
+              Церемония проходит медленно, с полным присутствием в моменте. Она помогает наладить диалог не только с чаем, но и с собой.
+              Это не просто традиция — это способ жизни, где важны тишина, уважение и внутренняя гармония.
+            </p>
 
-            <!-- Глава 1. История и Философия -->
-            <section>
-              <header>
-                <h4>Глава 1. Чашка Чая как Акт Гуманности</h4>
-              </header>
-              <p>
-                С древних времен чай применяли как лекарство, а затем он стал символом утончённости, спокойствия и гармонии. 
-                В VIII веке в Китае чаепитие стало популярным развлечением, а в XV веке в Японии его возвели в культ – Тядо. 
-                Философия Тядо учит нас видеть красоту в простоте и находить гармонию в каждом моменте.
-              </p>
-              <p>
-                Каждый глоток чая – это возможность остановиться, задуматься и проникнуться глубиной бытия. 
-                Чай напоминает о быстротечности жизни, призывая нас ценить каждое мгновение.
-              </p>
-            </section>
+            <h3>Чайная посуда — продолжение философии</h3>
+            <p>
+              В Гун Фу Ча и Пин Ча используются специальные чайники из исинской глины, маленькие пиалы, чахай, а также «ароматные чашечки».
+              Каждая из них не просто функциональна — она поддерживает настрой, аккуратно направляя внимание внутрь.
+            </p>
+            <p>
+              От прикосновения к глине, от струи воды до первого глотка — всё служит цели: быть здесь и сейчас.
+            </p>
 
-            <hr />
+            <h3>Философия тишины и присутствия</h3>
+            <p>
+              В китайских традициях чаепития главное — не форма, а состояние души. Чай становится медитативной практикой.
+              Это путь возвращения к простому: к дыханию, к моменту, к себе.
+            </p>
+            <p>
+              MindfulTea следует этим принципам: каждое заваривание, каждая церемония — это приглашение к внутренней тишине и настоящему присутствию.
+            </p>
 
-            <!-- Глава 2. Ритуалы и Традиции -->
-            <section>
-              <header>
-                <h4>Глава 2. Ритуалы и Традиции Чаепития</h4>
-              </header>
-              <p>
-                Чайная церемония – это искусство, в котором каждое движение, каждое прикосновение имеет значение. 
-                От выбора посуды до подачи напитка – все направлено на создание атмосферы умиротворения и сосредоточенности. 
-                Ритуалы MindfulTea передаются из поколения в поколение, сохраняя древние традиции и объединяя сердца людей.
-              </p>
-              <p>
-                Цель церемонии – не только насладиться вкусом чая, но и обрести внутреннюю гармонию, которая так необходима в современном мире.
-              </p>
-            </section>
+            <!-- Кнопки -->
+            <div class="actions">
+              <a href="main.html" class="btn outline">На главную</a>
+              <a href="form.html" class="btn primary">Записаться на церемонию</a>
+            </div>
 
-            <hr />
-
-            <!-- Фотогалерея -->
-            <section>
-              <header>
-                <h4>Фотогалерея Чаепития</h4>
-              </header>
-              <p>
-                Посмотрите на атмосферу MindfulTea через объектив. Ниже приведены фотографии, которые отражают красоту чайной церемонии и её традиций.
-              </p>
-              <div class="gallery">
-                <img src="images/tea1.jpg" alt="Чайная церемония">
-                <img src="images/tea2.jpg" alt="Чайная посуда">
-                <img src="images/tea3.jpg" alt="Мастер за чаем">
-                <!-- Добавьте другие изображения по необходимости -->
-              </div>
-            </section>
-
-            <hr />
-
-            <!-- Отзывы и цитаты -->
-            <section>
-              <header>
-                <h4>Отзывы и Мудрость</h4>
-              </header>
-              <div class="testimonial">
-                <p>
-                  «С каждым глотком чая я ощущаю, как уходит суета мира, и наступает тишина, наполняющая душу.»
-                </p>
-                <p><strong>— Анонимный поклонник MindfulTea</strong></p>
-              </div>
-              <div class="testimonial">
-                <p>
-                  «MindfulTea научил меня ценить каждый момент и видеть красоту даже в самых простых вещах.»
-                </p>
-                <p><strong>— Любитель чая</strong></p>
-              </div>
-            </section>
-
-            <hr />
-
-            <!-- Дополнительная информация -->
-            <section>
-              <header>
-                <h4>Философия и Современность</h4>
-              </header>
-              <p>
-                MindfulTea объединяет древние традиции с современным стремлением к осознанности. 
-                Здесь вы узнаете, как чай помогает нам обрести баланс, справляться со стрессом и находить вдохновение в повседневности.
-              </p>
-              <p>
-                Мы верим, что каждый может открыть для себя путь к внутренней гармонии, пробуждая в себе новые чувства и эмоции через ритуалы чаепития.
-              </p>
-            </section>
-
-            <hr />
-
-            <!-- Призыв к действию -->
-            <section>
-              <header>
-                <h4>Присоединяйтесь к Пути Чая</h4>
-              </header>
-              <p>
-                Если вы готовы углубиться в мир MindfulTea, изучить его философию и традиции, оставайтесь с нами. 
-                Пусть каждая деталь этой страницы станет шагом к вашему внутреннему равновесию.
-              </p>
-              <ul class="actions">
-                <!-- Ссылка на главную страницу обновлена -->
-                <li><a href="main.html" class="button primary">На Главную</a></li>
-                <li><a href="#footer" class="button">Контакты</a></li>
-              </ul>
-            </section>
-
-          </div> <!-- .inner -->
+          </div>
         </section>
       </article>
-
-      <!-- Подвал -->
-      <footer id="footer">
-        <ul class="icons">
-          <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-          <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-          <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-          <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-          <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-        </ul>
-        <ul class="copyright">
-          <li>&copy; MindfulTea 2025</li>
-          <li>Design by Marktd11</li>
-        </ul>
-      </footer>
 
     </div>
 
