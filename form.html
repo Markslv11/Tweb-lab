@@ -36,17 +36,14 @@
       color: #4a3f35;
     }
 
-    /* Единый белый фон для всех полей */
-    input,
-    textarea,
-    select {
+    input, textarea, select {
       width: 100%;
       padding: 0.8em;
       margin-top: 0.3em;
       border: 1px solid #ddd1c4;
       border-radius: 8px;
-      background: #ffffff;      /* белый фон */
-      color: #4a3f35;           /* тёмный текст */
+      background: #ffffff;
+      color: #4a3f35;
       font-size: 1em;
       transition: border-color 0.3s;
       box-sizing: border-box;
@@ -54,26 +51,21 @@
       -webkit-appearance: none;
     }
 
-    /* На всякий случай перекрашиваем date-picker */
     input[type="date"] {
-      background: #ffffff;      /* белый фон */
-      color: #4a3f35;           /* тёмный текст */
+      background: #ffffff;
+      color: #4a3f35;
     }
 
-    /* Стили индикатора календаря */
     input[type="date"]::-webkit-calendar-picker-indicator {
       filter: invert(0.3);
       opacity: 0.7;
     }
 
-    input::placeholder,
-    textarea::placeholder {
+    input::placeholder, textarea::placeholder {
       color: #a89f95;
     }
 
-    input:focus,
-    textarea:focus,
-    select:focus {
+    input:focus, textarea:focus, select:focus {
       outline: none;
       border-color: #e2533d;
     }
@@ -113,7 +105,7 @@
 <body>
   <div class="form-container">
     <h2>Запись на чайную церемонию</h2>
-    <form action="submit.php" method="POST">
+    <form id="teaForm">
       <label for="name">Ваше имя</label>
       <input type="text" id="name" name="name" required />
 
@@ -131,7 +123,40 @@
 
       <button type="submit" class="button">Записаться</button>
     </form>
+
+    <div id="response" style="margin-top: 2em; text-align: center;"></div>
+
     <a href="main.html" class="back-link">← Вернуться на главную</a>
   </div>
+
+  <script>
+    document.getElementById("teaForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const data = {
+        name: document.querySelector("#name").value,
+        email: document.querySelector("#email").value,
+        phone: document.querySelector("#phone").value,
+        date: document.querySelector("#date").value,
+        message: document.querySelector("#message").value,
+      };
+
+      fetch("submit.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.text())
+      .then(result => {
+        document.getElementById("response").innerHTML = result;
+      })
+      .catch(error => {
+        console.error("Ошибка:", error);
+        document.getElementById("response").innerHTML = "<p style='color:red;'>❌ Ошибка при отправке данных.</p>";
+      });
+    });
+  </script>
 </body>
 </html>
